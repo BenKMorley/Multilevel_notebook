@@ -1,3 +1,5 @@
 ising/*
 .ipynb_checkpoints/*
 twopt/*
+*.gif
+settings.json
