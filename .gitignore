@@ -3,3 +3,5 @@ ising/*
 twopt/*
 *.gif
 settings.json
+*cpython*
+__pycache__/*_
