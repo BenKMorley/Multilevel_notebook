@@ -1,6 +1,7 @@
 ising/*
 .ipynb_checkpoints/*
 twopt/*
+twopt_weighted/*
 *.gif
 settings.json
 *cpython*
