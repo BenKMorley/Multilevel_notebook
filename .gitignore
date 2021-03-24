@@ -1,7 +1,11 @@
+Multilevel_Ising.py
 ising/*
 .ipynb_checkpoints/*
 twopt/*
 twopt_weighted/*
+twopt_bootstrap/*
+twopt_jackknife/*
+py_scripts_2020_05_06/*
 *.gif
 settings.json
 *cpython*
