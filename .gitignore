@@ -1,4 +1,5 @@
 Multilevel_Ising.py
+graphs/*
 ising/*
 .ipynb_checkpoints/*
 twopt/*
