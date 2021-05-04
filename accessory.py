@@ -26,7 +26,7 @@ def animate(lattice_data, no_iterations, dt, save_fig=False, filename=None,
     INPUTS :
     --------
     lattice_data : (N, L, L) or (N, M, L, L) numpy array of {-1, 1}, single level or multilevel spin data.
-    no_iterations :  int, number of times the flock is stepped
+    no_iterations :  int, number of frames
     save_fig=False : Bool, if set to True then the animation will be saved in the
                      directory the script is being run in.
     filename=None : None or string, a string that the file is saved under
@@ -172,3 +172,52 @@ def animate_twopt(ising_slice, no_iterations, dt, delta, plotting_dimensions=2, 
                       interval=int(dt * 1000), blit=False, repeat=False)
 
   return ani
+
+
+## NOT WORKING
+def animate_slice_data(slice_data, N, M, L, no_iterations, dt, save_fig=False, filename=None,
+                       show_fig=True, plotting_dimensions=2):
+    """
+        INPUTS :
+        --------
+        lattice_data : (N, L, L) or (N, M, L, L) numpy array of {-1, 1}, single level or multilevel spin data.
+        no_iterations :  int, number of frames
+        save_fig=False : Bool, if set to True then the animation will be saved in the
+                        directory the script is being run in.
+        filename=None : None or string, a string that the file is saved under
+        show_fig=True : Bool, if True then the animation will display
+        dt : float, change in time between frames
+
+        RETURNS :
+        ---------
+        ani : Instance of matplotlib.animation.FuncAnimation class
+    """
+
+    # Flatten the data
+    data = slice_data[0]
+
+    # Create figure and axis
+    fig, axes = plt.subplots(4, 1)
+
+    a, b = numpy.histogram(data, int(L / 2))
+
+    ax1 = axes[0].bar(b[:-1], a, width=4 / L, align='edge')
+
+    axes = [bar_chart]
+
+    def update(num):
+        data = slice_data[num]
+        a, b = numpy.histogram(data, int(L / 2))
+
+        axs = [ax1]
+
+        for bar, h in zip(axs[0], a):
+            bar.set_height(h)
+
+        return axes
+
+    # Creating the Animation object
+    ani = FuncAnimation(fig, update, frames=range(no_iterations),
+                        interval=int(dt * 1000), blit=True, repeat=False)
+
+    return ani
