@@ -1,3 +1,4 @@
+*.pdf
 testing.py
 Multilevel_Ising.py
 graphs/*
