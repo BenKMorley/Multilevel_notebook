@@ -19,5 +19,5 @@ Ben Kitching-Morley
 
 Project Authors:
 ----------------
-Ben Kitching-Morley \\
+Ben Kitching-Morley  \
 Andreas Jüttner
