@@ -1,10 +1,10 @@
 multilevel.py
 *.pdf
 testing.py
-*/data/*
+*data/*
 Multilevel_Ising.py
-*/graphs/*
-*/ising/*
+*graphs/*
+*ising/*
 *.zip
 .ipynb_checkpoints/*
 twopt/*
