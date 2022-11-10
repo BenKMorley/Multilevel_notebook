@@ -20,3 +20,5 @@ Project Authors:
 ----------------
 Ben Kitching-Morley  \
 Andreas Jüttner
+
+Distributed under the Creative Commons Attribution 4.0 International licence
